@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className="container-fluid">
             <div className="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light ">
                     <Link class="navbar-brand" href="#">
                         <img height='60' src={logo} alt="" />
                     </Link>
@@ -14,24 +14,24 @@ const Navbar = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav ml-auto font-weight-bolder">
                             <li class="nav-item">
-                                <Link class="nav-link mr-4" to='/'>Home</Link>
+                                <Link class="nav-link text-light mr-4" to='/'>Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link mr-4" to="#">About</Link>
+                                <Link class="nav-link text-light mr-4" to="#">About</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link mr-4" to="#">Dental Services</Link>
+                                <Link class="nav-link text-light mr-4" to="#">Dental Services</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link mr-4" to="#">Reviews</Link>
+                                <Link class="nav-link text-light mr-4" to="#">Reviews</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link mr-4" to="#">Blog</Link>
+                                <Link class="nav-link text-light mr-4" to="#">Blog</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link mr-4" to="#">Contract Us</Link>
+                                <Link class="nav-link text-light mr-4" to="#">Contract Us</Link>
                             </li>
                         </ul>
                     </div>
