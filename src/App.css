@@ -6,6 +6,7 @@
     height: 600px;
     background-size: cover;
     background-position: center;
+    margin-bottom: 100px;
 }
 .bgGradient{
     background-image: linear-gradient(63deg, rgba(25,211,179,1) 45%, rgba(16,208,234,1) 100%);
@@ -13,3 +14,5 @@
 .bgSolid{
     background-color: #3a4256 !important;
 }
+.textColor1{color:rgba(25,211,179,1);}
+.textColor2{color:#3a4256;}
