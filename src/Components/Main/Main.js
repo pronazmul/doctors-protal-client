@@ -6,6 +6,7 @@ import {
   } from "react-router-dom"
 import AppoinmentPage from '../AppoinmentPage/AppoinmentPage'
 import HomePage from '../Home/HomePage'
+import Login from '../Login/Login';
 
 const Main = () => {
     return (
@@ -15,8 +16,12 @@ const Main = () => {
                     <HomePage></HomePage>
                 </Route>
 
-                <Route exact path='/appoinment'>
+                <Route path='/appoinment'>
                     <AppoinmentPage></AppoinmentPage>
+                </Route>
+
+                <Route path='/login'>
+                    <Login></Login>
                 </Route>
                 
                 <Route path='*'>

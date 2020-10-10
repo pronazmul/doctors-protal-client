@@ -16,22 +16,22 @@ const Navbar = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto font-weight-bolder">
                             <li class="nav-item">
-                                <Link class="nav-link text-light mr-4" to='/'>Home</Link>
+                                <Link class="nav-link textColor1 mr-4" to='/'>Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link text-light mr-4" to='/appoinment'>Appoinment</Link>
+                                <Link class="nav-link textColor1 mr-4" to='/appoinment'>Appoinment</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link text-light mr-4" to="#">Dental Services</Link>
+                                <Link class="nav-link textColor1 mr-4" to="#">Dental Services</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link text-light mr-4" to="#">Reviews</Link>
+                                <Link class="nav-link textColor1 mr-4" to="#">Reviews</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link text-light mr-4" to="#">Blog</Link>
+                                <Link class="nav-link textColor1 mr-4" to="#">Blog</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link text-light mr-4" to="#">Contract Us</Link>
+                                <Link class="nav-link textColor1 mr-4" to='/login'>Login</Link>
                             </li>
                         </ul>
                     </div>

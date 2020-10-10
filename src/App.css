@@ -43,10 +43,17 @@
 }
 
 .footer-bg{
-    background-image: url('./Components//Images/footer-bg.png');
+    background-image: url('./Components/Images/footer-bg.png');
     background-position: center;
     background-size: cover;
     height: 500px;
+}
+.login-bg{
+    background-image: url('./Components/Images/loginbg.png');
+    background-position:right 10px bottom 0px;
+    background-size:70vh;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .bgGradient{
@@ -55,7 +62,7 @@
 .bgSolid{
     background-color: #3a4256 !important;
 }
-.textColor1{color:rgba(25,211,179,1);}
+.textColor1{color:#19d3b3 !important;}
 .textColor2{color:#3a4256;}
 .spacer{margin:100px auto !important;}
 
