@@ -4,12 +4,13 @@ import Blog from './Blog/Blog';
 import Contract from './Contract/Contract';
 import Doctors from './Doctors/Doctors';
 import FeaturedService from './FeaturedService/FeaturedService';
-import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Service from './Service/Service';
 import Testimonial from './Testimonial/Testimonial';
+import Footer from '../Shared/Footer/Footer'
 
 const HomePage = () => {
+    document.title="HOME | DOCTORS-PORTAL"
     return (
         <>
             <Header></Header>
@@ -21,6 +22,7 @@ const HomePage = () => {
             <Doctors></Doctors>
             <Contract></Contract>
             <Footer></Footer>
+            
         </>
     );
 };

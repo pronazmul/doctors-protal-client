@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import bannar from '../../Images/bannar.png'
 
 const Bannar = () => {
@@ -9,7 +10,7 @@ const Bannar = () => {
                     <div className="col-md-4 offset-md-1">
                         <h1 className='font-weight-bolder textColor2'>Your New Smile <br/> Starts Here</h1>
                         <p className='lead'>Vero officia atque ipsa, quo et architecto omnis veniam quos magnam id! Lorem ipsum dolor sit amet.</p>
-                        <button className='btn bgGradient text-light'>GET APPOINMENT</button>
+                        <Link to='/appoinment' className='btn bgGradient text-light'>GET APPOINMENT</Link>
                     </div>
                     <div className="col-md-6">
                         <img className='img-fluid' src={bannar} alt=""/>
