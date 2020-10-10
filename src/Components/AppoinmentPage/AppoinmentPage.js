@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import AppoinmentBannar from './AppoinmentBannar/AppoinmentBannar';
+import BookAppoinment from './BookAppoinment/BookAppoinment';
 
 const AppoinmentPage = () => {
     document.title='APPOINMENT'
@@ -11,6 +12,7 @@ const AppoinmentPage = () => {
         <div className='header-bg'>
             <Navbar></Navbar>
             <AppoinmentBannar date ={date} setDate={setDate}></AppoinmentBannar>
+            <BookAppoinment date={date}></BookAppoinment>
             <Footer></Footer>
         </div>
     );
