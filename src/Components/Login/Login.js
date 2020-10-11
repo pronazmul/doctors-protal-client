@@ -95,7 +95,7 @@ const Login = () => {
                       <div className="btn-group" role="group" aria-label="Basic example">
                                 <button onClick={googleLogin} type="button" className="btn textColor1"><FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon> Google Sign In</button>
                                 <button onClick={facebookLogin} type="button" className="btn textColor1"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon> Facebook Sign In</button>
-                    </div>
+                    </div> 
                 </div>
             </div>
             </div>
