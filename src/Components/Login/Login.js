@@ -4,15 +4,60 @@ import Navbar from '../Shared/Navbar/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { useForm } from "react-hook-form"
+import { handleFacebookSignIn, handleGoogleSignIn, initializeFirebase, createUser, signInEmailPass } from './FirebaseAuth';
 
+initializeFirebase()
 
 const Login = () => {
     document.title='LOGIN'
     const [accState, setAccState] = useState(true)
 
-    // Login Resistration Data 
+    // Mannage Login Resistration...... 
     	const { register, handleSubmit, errors } = useForm();
-    	const onSubmit = data => { console.log(data) }
+        const onSubmit = data => { 
+            if(!accState){
+                createUser(data.email, data.password, data.name)
+                .then(message =>{ 
+                    alert("Account Created Successfully")
+                    setAccState(true)
+                })
+                .catch(error => alert(error))
+            }
+                
+            if(accState){
+                signInEmailPass(data.email, data.password)
+                .then(res => {
+                    console.log(res)
+                    // setLoggedInUser(res)
+                    // history.replace(from)                    
+                })
+                .catch(error => alert(error))
+                
+            }
+         }
+    
+    //Mannage Google Sign in...
+    const googleLogin =() =>{
+        handleGoogleSignIn()
+        .then(result => {
+            console.log(result)
+            // setLoggedInUser(result)
+            // history.replace(from) 
+        })
+    } 
+
+    //Mannage Facebook Sign in...
+    const facebookLogin = () =>{
+        handleFacebookSignIn()
+        .then(result => {
+            console.log(result)
+            // setLoggedInUser(result) 
+            // history.replace(from)             
+        })
+        
+    }
+
+    
     return (
         <div className="container-fluid login-bg">
             <Navbar></Navbar>
@@ -30,10 +75,6 @@ const Login = () => {
                                 <Link className='textColor1 bold d-block mt-3' onClick={()=>setAccState(!accState)}>Create An account</Link>
                                 <button type='submit' className='btn btn-block bgGradient my-4'>Login</button>
                             </form>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" className="btn textColor1"><FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon> Google Sign In</button>
-                                <button type="button" className="btn textColor1"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon> Facebook Sign In</button>
-                            </div>
                         </>
                      :
                         <>
@@ -48,12 +89,13 @@ const Login = () => {
                                 <Link className='textColor1 bold d-block mt-3' onClick={()=>setAccState(!accState)}>Already Have An Account</Link>
                                 <button type='submit' className='btn btn-block bgGradient my-4'>Registration</button>
                             </form>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" className="btn textColor1"><FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon> Google Sign In</button>
-                                <button type="button" className="btn textColor1"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon> Facebook Sign In</button>
-                            </div>
                         </>
                       }
+                      
+                      <div className="btn-group" role="group" aria-label="Basic example">
+                                <button onClick={googleLogin} type="button" className="btn textColor1"><FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon> Google Sign In</button>
+                                <button onClick={facebookLogin} type="button" className="btn textColor1"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon> Facebook Sign In</button>
+                    </div>
                 </div>
             </div>
             </div>
