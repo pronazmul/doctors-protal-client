@@ -16,7 +16,6 @@ Doctors & Patient Management System Full Stack MERN Project.
 
 ## Technology
 - ReactJs (JSX, Hooks, Contex-Api, Route)
-- Firebase (Google Authentication, Hosting)
 - NodeJs (ExpressJs, MongoDB, Body-Parser, CORS, File-Upload, Env, Nodemon)
 - Bootstrap4
 - HTML5
